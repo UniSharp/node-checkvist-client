@@ -1,0 +1,11 @@
+{
+  "name": "checkvist-client",
+  "version": "0.1.0",
+  "description": "A checkvist API wrapper.",
+  "main": "checkvist.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "UniSharp Ltd. <services@unisharp.com> (http://unisharp.com)",
+  "license": "MIT"
+}
