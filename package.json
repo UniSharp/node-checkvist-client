@@ -1,6 +1,6 @@
 {
   "name": "checkvist-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A checkvist API wrapper.",
   "main": "checkvist.js",
   "scripts": {

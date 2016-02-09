@@ -108,23 +108,19 @@ exports.getListItems = (input, callback) => {
 };
 
 
-exports.updateListItem = (input, callback) => {
-  var token = input.token;
+exports.updateListItem = (input, task, callback) => {
   var checklistId = input.checklistId;
   var taskId = input.taskId;
-  var task = input.task;
+  var token = input.token;
 
-  var inputParams = {
-    'token': token,
-    task: task,
-  };
 
   var options = getOptions({
-    path: '/checklists/' + checklistId + '/tasks/' + taskId + '.json',
+    path: '/checklists/' + checklistId + '/tasks/' + taskId + '.json?token=' + token,
     method: 'PUT',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
   });
 
-  httpClient.send(options, inputParams, (response) => {
+  httpClient.send(options, task, (response) => {
     callback(JSON.parse(response));
   });
 
