@@ -13,8 +13,10 @@ Under development, this is a draft release.
 
 ### Usage
 
+`npm install checkvist-client`
+
 ```
-const checkvist = require('./checkvist.js');
+const checkvist = require('checkvist-client');
 const credentials = {
   username: '', // email
   key: '', // API Key
